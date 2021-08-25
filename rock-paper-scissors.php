@@ -8,13 +8,12 @@
     }
 
     $selection = readline("Pick your option: ");
-    $isPromptActive = true;
+    $selection = $options[$selection];
 
+    $isPromptActive = true;
     while($isPromptActive){
         $selection > 2 || $selection < 0 ? $selection = readline("Try again: ") : $isPromptActive = false;
     }
-    
-    $selection = $options[$selection];
 
     function findWinner(string $selection, string $computer): string {
         switch(true){
