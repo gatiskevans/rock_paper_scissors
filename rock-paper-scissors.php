@@ -11,7 +11,7 @@
 
     $isPromptActive = true;
     while($isPromptActive){
-        $selection > 2 || $selection < 0 ? $selection = readline("Try again: ") : $isPromptActive = false;
+        $selection > 2 || $selection < 0 || strlen($selection) > 1 ? $selection = readline("Try again: ") : $isPromptActive = false;
     }
 
     $selection = $options[$selection];
